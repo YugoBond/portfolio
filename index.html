@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo1.png" type="image/x-icon">
+    <title>yugo's page</title>
+</head>
+<body>
+
+    <!-- Fullscreen Terminal Startup Overlay -->
+    <div id="terminal-intro">
+        <div class="intro-content">
+            <pre class="ascii-art intro-ascii">
+                                            :==.      :==:                                          
+                                   :-:     :+##+=.  :=*%%#-      ::                                 
+                                  .+#+=-: :+#####+==+%%%%%%=  :-=+*                                 
+                                  =####%**@++*####%%#%%%@@@=-=+###%-                                
+                          -+===-:=+#####%#@@@+++%%%%%%@@@+++######%+     :-.                        
+                          =%%%%@@+####%%##%%@@@+#%%%%@@++*#######%##--:=+##-                        
+                          -%%%%%@+###%##%%#%%%@@+#%@@@+*##########%@+*#####:                        
+                  .:--:-  +%%%%%@+#########%%%%@@*%@++*##########%#@*######=                        
+                   +###%%#%%%%%%@+#######%#%%%%#@@#+*#########%%%%%@+****#%+=---==.                 
+                   =#######%%%%%@+##########%#%%%%@+*##########%%%%@*%%%%%%%%%%%%#:                 
+                    *++++++##%##@+*###########%%%@@@+##########%%%%@*###%%%%%%%%@+                  
+                   +#@@@@@@%+++*#@++#########%%%%%@@+########%%%%%@*%@@@@@@@@@@@@                  
+              :--=*@@%%##%%@@@@@@@@=++*#####%##%%#%@+######%%#%##@@@@+++++++++++*+.                 
+              -######%#%%%%%%%%%%#@@@@=++*#####%*#%@*####%#%%#%%@@=++*############+=--:             
+               -+###########%#%#%%%%+%@@@+**##%@*##%#####%%%%@@@@++##################+-             
+                =+############%#%%%%@++*@@@+###@+######%%@@%%%@@++##################+-              
+              :+@++*################@@@++*%@###@+##*%#%@%####%++*###############%#%@+               
+           -=+#%@@@=+*################@@+++*#@%@**#*@@@**###***####%####%#%#%%%%@@@++:              
+          .+*%%%%%@@@++*###############%@@+++**##+++@+***+*############%%%%#%%@@@++*#+---           
+            .=+%%%%%@@@++*###########***+**##++=@@@@=+++@%%%#######%%%#%%%%%@@@+++#####+=.          
+              +@%%%%%%@@@+=+++####%%%@@@@@@@@*@@%**@@%@@@@%@@@@@@@%%##*#%@@@@+*#%#*##+=:            
+             -+*#%%%##***@@@@=++++++++++**#%@@@@+==*@==+++***###%@@@@@@@@@%#*###%%%%*=              
+           .=+###****+@@@@%%@@@@@@@@@@@@%%#*++@@@@@@@@*#%%*++++***##+++++++@@@@%%#%%%+              
+          .=%####*++@@@%%%%%%#%###%%#%####*@@@@@+%@+*@@@**#%%%###***######*+++@@@%%%%%++            
+           .:=+#*+@@@%%%%%#%#############@%%%%*+@@@+*+*%@@%##################*++@@@%%%%@*:          
+               +#@@%#%####%##################%#*%%%@##*+*#@@@%%################*+*@@%+==:           
+               #@%######%###############**+@%%#####%###%+++*%@@%%%###############++@=               
+              -+%####################*+++@@%########%##%#%++***@@%%%#%%###########*+-               
+            .=*###################++++#@@@######*##*@%#%##%%**++@@%%%%%%%##%########+:              
+             :----==++*####*++++++=@@@@%###%####*#*+@%#########++@@%%%%%%#%%#########+.             
+                   +@%++++++@@@@@@@@%%##%#%####%*#+@%%%#########*+@@@@@@@@@@@@@#+-----.             
+                  -%@@@@@@@@@%%*@@%%%%%#########*++@#%#%#########+@%*+*+*++++++=                    
+                  +%%%%%%%%#%#%*@%%%#%%##########+@@%%###########*=@%%%#%*#####+.                   
+                 .+@@@@@@%%%%%%+@%%%%%%#########++@%#%%%%#########+@%%%%%#######=                   
+                   -::: -#*****+@%%%%##%######*++@@@%%%%%#########+@%%%%%*=-::--:                   
+                        +%#####+@%%##########*+@@%*@@%%%%##%%#####+@%%%%%=                          
+                        -#####*+@%#%%######*++@@%%#+@@@%%#%#######+@%%%%%-                          
+                        -+=---:=#%#######*++@@@%%#%#*+@@%%########=%+*%%%=                          
+                        ++++++++*######*++@@@%%%%%%#**++@@@%#####+:  :===:                          
+                                :+###+--+@@%%%%%%%#####*+=+=+####=                                  
+                                 -=--    +#%%%+=-:=+####+:  :-=++.                                  
+                                          +##+:    -+##+:    :.                                     
+                                           -:       .--                                             
+            </pre>
+            <div class="intro-line">
+                <span class="prompt">danilo@tivat:~$ </span><span id="typed-cmd"></span><span id="cursor-cmd" class="cursor">█</span>
+            </div>
+            <div id="sudo-container" class="intro-line hidden">
+                <span class="prompt">[sudo] password for danilo: </span><span id="typed-pass"></span><span id="cursor-pass" class="cursor hidden">█</span>
+            </div>
+            <div id="intro-hint" class="hint">Press [ENTER] or click to skip...</div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="page-header">
+        <h1>Welcome to yugo's page</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="about">Basic info</a></li>
+                <li><a href="#" class="nav-link" data-target="portfolio">Portfolio</a></li>
+                <li><a href="#" class="nav-link" data-target="certs">Certificates</a></li>
+                <li><a href="#" class="nav-link" data-target="socials">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Layout Container -->
+    <div class="terminal-layout">
+        <main class="main-content">
+            <div class="container">
+
+                <section id="about" class="card-section active-card">
+                    <div class="text-content">
+                        <h2>Basic Information</h2>
+                        <p>Hi, my name is <strong>Danilo Milašević</strong>.</p>
+                        <p>I am a high school student at <strong>JU SMŠ "Mladost"</strong> in <a href="https://www.google.com/maps/search/?api=1&query=Tivat,+Montenegro" target="_blank" rel="noopener noreferrer">Tivat, Montenegro</a>.</p>
+                        <p>My primary technical focus is cybersecurity, web security, cloud engineering, full-stack development, and hands-on lab environments.</p>
+                        <p>Outside of all that technical work, I actively participate in municipal youth council initiatives, community volunteer projects, local music societies, and regional technology forums.</p>
+                        <p>I like to experiment with new hobbies and interests.</p>
+                        <p>I wish to meet ambitious and like-minded individuals.</p>
+                        <p><em>A jack of all trades is a master of none, but often times better than a master of one.</em></p>
+                    </div>
+                    <img src="img/1.jpeg" alt="Danilo Milašević profile picture" class="profile-image">
+                </section>
+
+                <section id="portfolio" class="card-section">
+                    <div class="text-content">
+                        <h2>Portfolio & Experience</h2>
+                        <ul>
+                            <li><strong>Hackathon Achievements:</strong> Two 1st-place wins at local Tivat hackathons; 4th and 5th place finishes at national hackathons in Podgorica.</li>
+                            <li><strong>Work Experience:</strong>
+                                <ul>
+                                    <li>Projectionist at <em>Cinegrand MCF</em> (Nov 2025 — May 2026) — Digital screening verification, audio control, and booth maintenance.</li>
+                                    <li>Assistant at <em>MonteMood</em> (Apr 2025 — Dec 2025) — Operational support, quality control, and workflow optimization.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Leadership & Volunteer Work:</strong> Youth activism with NGO "Youth Team Tivat" and NGO "Our Action"; organized inter-school volleyball match between SMŠ "Mladost" and Knightsbridge; Coordinated <a href="https://www.google.com/search?q=IFF+Porto+Montenegro+2026" target="_blank" rel="noopener noreferrer">IFF Porto Montenegro 2026</a>.</li>
+                            <li><strong>Competitive Sports:</strong> Competitive chess player for Chess Club "Mimoza" Tivat.</li>
+                            <li><strong>Technical Competencies:</strong> C, C++, HTML, CSS, JavaScript, PHP, Java, Kotlin, MySQL, Linux, SQL, nmap, wireshark, metasploit, and hardware troubleshooting.</li>
+                        </ul>
+                    </div>
+                    <img src="img/ferro.jpg" alt="1st place award event photo" class="profile-image">
+                </section>
+
+                <section id="certs" class="card-section">
+                    <div class="text-content">
+                        <h2>Certificates & Courses</h2>
+                        <ul class="cert-list">
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/logate.png" alt="Logate Institute logo" class="cert-logo">
+                                </span>
+                                Web Programming (HTML, CSS, JS)
+                            </li>
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/eccouncil.png" alt="EC-Council logo" class="cert-logo">
+                                    <img src="img/coursera.png" alt="Coursera logo" class="cert-logo sub-logo">
+                                </span>
+                                Ethical Hacking Essentials (EHE)
+                            </li>
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/google.webp" alt="Google logo" class="cert-logo">
+                                    <img src="img/coursera.png" alt="Coursera logo" class="cert-logo sub-logo">
+                                </span>
+                                Cybersecurity Specialization: 6 out of 9 courses completed
+                            </li>
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/meta.png" alt="Meta logo" class="cert-logo">
+                                    <img src="img/coursera.png" alt="Coursera logo" class="cert-logo sub-logo">
+                                </span>
+                                Meta Android Developer: 3 out of 9 courses completed
+                            </li>
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/htb.png" alt="HTB Academy logo" class="cert-logo">
+                                </span>
+                                CJCA pathway completed, CWES in progress
+                            </li>
+                            <li>
+                                <span class="logo-group">
+                                    <img src="img/outliers.jpg" alt="Outlier AI logo" class="cert-logo">
+                                </span>
+                                AI Mode ON
+                            </li>
+                            <li>
+                                <strong>Conferences & Summits Attended:</strong>
+                                <div class="event-badge-grid">
+                                    <span class="logo-group" title="AWIGA"><img src="img/awiga.png" alt="AWIGA logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="Infintech"><img src="img/infintech.png" alt="Infintech logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="3D-IN"><img src="img/3dsoba.png" alt="3D-IN logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="AFS"><img src="img/afs.svg" alt="AFS logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="Business Beat"><img src="img/bsnsbeat.png" alt="Business Beat logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="CIM Forum"><img src="img/cim.png" alt="CIM Forum logo" class="cert-logo"></span>
+                                    <span class="logo-group" title="GC Montenegro"><img src="img/gamechanger.svg" alt="GameChanger logo" class="cert-logo"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="socials" class="card-section">
+    <div class="text-content">
+        <h2>Socials & Contact</h2>
+        <div class="social-links">
+            <a href="https://www.linktr.ee/yugo.me" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+                <img src="img/linktree.webp" alt="Linktree" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/danilo-milasevic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="img/linkedin.webp" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="mailto:danilo.milasevic.business@gmail.com" aria-label="Email">
+                <img src="img/gmail.png" alt="Email" class="social-icon">
+            </a>
+            <a href="tel:+38268109804" aria-label="Phone">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/phone.svg" alt="Phone" class="social-icon">
+            </a>
+        </div>
+    </div>
+</section>
+            </div>
+
+            <!-- Interactive CLI Box -->
+            <div class="cli-container">
+                <div id="cli-output" class="cli-output"></div>
+                <div class="cli-input-line">
+                    <span class="prompt">danilo@tivat:~$</span>
+                    <input type="text" id="cli-input" placeholder="Type 'help'..." autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </main>
+
+        <aside class="ascii-sidebar">
+            <pre class="ascii-art">
+                                            :==.      :==:                                          
+                                   :-:     :+##+=.  :=*%%#-      ::                                 
+                                  .+#+=-: :+#####+==+%%%%%%=  :-=+*                                 
+                                  =####%**@++*####%%#%%%@@@=-=+###%-                                
+                          -+===-:=+#####%#@@@+++%%%%%%@@@+++######%+     :-.                        
+                          =%%%%@@+####%%##%%@@@+#%%%%@@++*#######%##--:=+##-                        
+                          -%%%%%@+###%##%%#%%%@@+#%@@@+*##########%@+*#####:                        
+                  .:--:-  +%%%%%@+#########%%%%@@*%@++*##########%#@*######=                        
+                   +###%%#%%%%%%@+#######%#%%%%#@@#+*#########%%%%%@+****#%+=---==.                 
+                   =#######%%%%%@+##########%#%%%%@+*##########%%%%@*%%%%%%%%%%%%#:                 
+                    *++++++##%##@+*###########%%%@@@+##########%%%%@*###%%%%%%%%@+                  
+                   +#@@@@@@%+++*#@++#########%%%%%@@+########%%%%%@*%@@@@@@@@@@@@                  
+              :--=*@@%%##%%@@@@@@@@=++*#####%##%%#%@+######%%#%##@@@@+++++++++++*+.                 
+              -######%#%%%%%%%%%%#@@@@=++*#####%*#%@*####%#%%#%%@@=++*############+=--:             
+               -+###########%#%#%%%%+%@@@+**##%@*##%#####%%%%@@@@++##################+-             
+                =+############%#%%%%@++*@@@+###@+######%%@@%%%@@++##################+-              
+              :+@++*################@@@++*%@###@+##*%#%@%####%++*###############%#%@+               
+           -=+#%@@@=+*################@@+++*#@%@**#*@@@**###***####%####%#%#%%%%@@@++:              
+          .+*%%%%%@@@++*###############%@@+++**##+++@+***+*############%%%%#%%@@@++*#+---           
+            .=+%%%%%@@@++*###########***+**##++=@@@@=+++@%%%#######%%%#%%%%%@@@+++#####+=.          
+              +@%%%%%%@@@+=+++####%%%@@@@@@@@*@@%**@@%@@@@%@@@@@@@%%##*#%@@@@+*#%#*##+=:            
+             -+*#%%%##***@@@@=++++++++++**#%@@@@+==*@==+++***###%@@@@@@@@@%#*###%%%%*=              
+           .=+###****+@@@@%%@@@@@@@@@@@@%%#*++@@@@@@@@*#%%*++++***##+++++++@@@@%%#%%%+              
+          .=%####*++@@@%%%%%%#%###%%#%####*@@@@@+%@+*@@@**#%%%###***######*+++@@@%%%%%++            
+           .:=+#*+@@@%%%%%#%#############@%%%%*+@@@+*+*%@@%##################*++@@@%%%%@*:          
+               +#@@%#%####%##################%#*%%%@##*+*#@@@%%################*+*@@%+==:           
+               #@%######%###############**+@%%#####%###%+++*%@@%%%###############++@=               
+              -+%####################*+++@@%########%##%#%++***@@%%%#%%###########*+-               
+            .=*###################++++#@@@######*##*@%#%##%%**++@@%%%%%%%##%########+:              
+             :----==++*####*++++++=@@@@%###%####*#*+@%#########++@@%%%%%%#%%#########+.             
+                   +@%++++++@@@@@@@@%%##%#%####%*#+@%%%#########*+@@@@@@@@@@@@@#+-----.             
+                  -%@@@@@@@@@%%*@@%%%%%#########*++@#%#%#########+@%*+*+*++++++=                    
+                  +%%%%%%%%#%#%*@%%%#%%##########+@@%%###########*=@%%%#%*#####+.                   
+                 .+@@@@@@%%%%%%+@%%%%%%#########++@%#%%%%#########+@%%%%%#######=                   
+                   -::: -#*****+@%%%%##%######*++@@@%%%%%#########+@%%%%%*=-::--:                   
+                        +%#####+@%%##########*+@@%*@@%%%%##%%#####+@%%%%%=                          
+                        -#####*+@%#%%######*++@@%%#+@@@%%#%#######+@%%%%%-                          
+                        -+=---:=#%#######*++@@@%%#%#*+@@%%########=%+*%%%=                          
+                        ++++++++*######*++@@@%%%%%%#**++@@@%#####+:  :===:                          
+                                :+###+--+@@%%%%%%%#####*+=+=+####=                                  
+                                 -=--    +#%%%+=-:=+####+:  :-=++.                                  
+                                          +##+:    -+##+:    :.                                     
+                                           -:       .--                                             
+            </pre>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
